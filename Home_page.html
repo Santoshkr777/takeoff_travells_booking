@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Takeoff Travells</title>
+
+<link rel="stylesheet" href="H_page.css">
+<script>
+  function replace() {
+    document.getElementById("bus").style.display = "none";
+    document.getElementById("aero").style.display = "block";
+    document.getElementById("train").style.display = "none";
+    document.getElementById("cab").style.display = "none";
+    document.getElementById("hotel").style.display = "none";
+  } 
+  function replace1() {
+      document.getElementById("bus").style.display = "block";
+      document.getElementById("aero").style.display = "none";
+      document.getElementById("train").style.display = "none";
+      document.getElementById("cab").style.display = "none";
+      document.getElementById("hotel").style.display = "none";
+    } 
+    function replace2() {
+        document.getElementById("bus").style.display = "none";
+        document.getElementById("aero").style.display = "none";
+        document.getElementById("train").style.display = "block";
+        document.getElementById("cab").style.display = "none";
+        document.getElementById("hotel").style.display = "none";
+      } 
+      function replace3() {
+          document.getElementById("bus").style.display = "none";
+          document.getElementById("aero").style.display = "none";
+          document.getElementById("train").style.display = "none";
+          document.getElementById("cab").style.display = "none";
+          document.getElementById("hotel").style.display = "block";
+        } 
+        function replace4() {
+            document.getElementById("bus").style.display = "none";
+            document.getElementById("aero").style.display = "none";
+            document.getElementById("train").style.display = "none";
+            document.getElementById("cab").style.display = "block";
+            document.getElementById("hotel").style.display = "none";
+          } 
+</script>
+</head>
+<body style="background-color: bisque">
+  <div id="head">
+    <header style="opacity: 1; color: rgb(75, 75, 100);">Takeoff Travells</header>
+  </div>
+  <div class="bar"></div>
+
+  <center>
+  
+    <div class="nav">
+      <div class="pill-nav">
+        <a onclick="replace()"><img src="FLIGHT.png" height="25px" width="auto"><br>flights</a>
+        <a onclick="replace1(); return replace1()"><img src="BUS (2).png" height="25px" width="25px"><br>bus</a>
+        <a onclick="replace2(); return replace2()"><img src="TRAIN1.png" height="25px" width="25px"><br>train</a>
+        <a onclick="replace3();"><img src="HOTEL2.png" height="25px" width="auto"><br>hotel</a>
+        <a onclick="replace4()"><img src="CAB.png" height="25px" width="25px"><br>cabs</a>
+        <a href="#trip"><img src="com.png" height="25px" width="25px"><br>trips</a>
+      </div>
+    </div>
+  
+    <div class="book">
+  
+      <div id="aero">
+        <div style="font-size: 17px; padding-top: 60px;">
+          <input type="radio" name="trip" value="one way" style="padding-left: 50px;"><span>ONEWAY</span>
+          <input type="radio" name="trip" value="round trip"><span>ROUND TRIP</span>
+          <p style="display: inline; padding-left: 610px;">Book domestic and international flights</p>
+  
+          <div style="width: 95%; height: 200px;
+              box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+              padding: 25px;
+              position: relative; top: 15px;">
+            <table>
+              <tr>
+                <th style="width: 275px;"><br>
+                  <label for="from">FROM</label>
+                  <input type="search" list="place" id="from" name="from" placeholder="enter" />
+                  <datalist id="place">
+                    <option value="Delhi">
+                    <option value="Bengaluru">
+                    <option value="Hyderabad">
+                    <option value="Mumbai">
+                    <option value="Chennai">
+                    <option value="Bangkok">
+                    <option value="Pune">
+                    <option value="Kolkata">
+                    <option value="Goa">
+                    <option value="Singapore">
+                    <option value="Kathmandu">
+                    <option value="Sharjah">
+                    <option value="New York">
+                    <option value="London">
+                    <option value="Hong Kong">
+                    <option value="San Fransisco">
+                    <option value="Paris">
+                    <option value="Tokyo">
+                    <option value="Berlin">
+                    <option value="Rome">
+                    <option value="Toronto">
+                    <option value="Geneva">
+                    <option value="Sydney">
+                    <option value="Johannesburg">
+                    <option value="Barcelona">
+                    <option value="Mangalore">
+                    <option value="Hubali">
+  
+                  </datalist>
+                </th>
+                <th style="width: 275px;"><br>
+                  <label for="to">TO</label>
+                  <input type="search" list="place" id="to" name="to" placeholder="enter" />
+  
+                  <datalist id="place">
+                    <option value="Delhi">
+                    <option value="Bengaluru">
+                    <option value="Hyderabad">
+                    <option value="Mumbai">
+                    <option value="Chennai">
+                    <option value="Bangkok">
+                    <option value="Pune">
+                    <option value="Kolkata">
+                    <option value="Goa">
+                    <option value="Singapore">
+                    <option value="Kathmandu">
+                    <option value="Sharjah">
+                    <option value="New York">
+                    <option value="London">
+                    <option value="Hong Kong">
+                    <option value="San Fransisco">
+                    <option value="Paris">
+                    <option value="Tokyo">
+                    <option value="Berlin">
+                    <option value="Rome">
+                    <option value="Toronto">
+                    <option value="Geneva">
+                    <option value="Sydney">
+                    <option value="Johannesburg">
+                    <option value="Barcelona">
+                    <option value="Mangalore">
+                    <option value="Hubali">
+                    </option>
+                    </option>
+                  </datalist>
+                </th>
+                <th style="width: 200px">
+                  <label for="start"><br>DEPARTURE</label>
+  
+                  <input type="date" id="start" name="trip-start" value="dd/mm/yyyy">
+  
+                </th>
+                <th style="width: 200px">
+                  <label for="return"><br>RETURN</label>
+  
+                  <input type="date" id="return" name="trip-return" value="dd/mm/yyyy">
+  
+                </th>
+                <th style="padding: 15px">
+                  <label for="travellers">TRAVELLERS<br></label>
+                  <select name="nu" id="travellers">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                  </select>
+                  <label for="class"><br>CLASS</label>
+                  <select name="class" id="class">
+                    <option value="c1">Economy/Premium Economy</option>
+                    <option value="c2">Premium Economy</option>
+                    <option value="c3">Business</option>
+                  </select>
+                </th>
+              </tr>
+            </table>
+          </div>
+  
+          <div style="width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background-color:whitesmoke;
+                overflow: hidden; position: relative;
+                bottom:115px; right: 335px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                padding:10px;">
+            <img src="t.png" width="25px" height="25px">
+          </div>
+        </div>
+        <a href="ld1.html"><button>Search</button></a>
+      </div>
+  
+      <div id="bus" style="display: none;">
+        <div style="font-size: 17px; padding-top: 60px;">
+          <p style="display: inline;">Book Bus Ticket Across India.</p>
+  
+          <div style="width: 95%;
+              height: 200px;
+              box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+              padding: 25px;
+              position: relative; top: 15px;">
+            <table>
+              <tr>
+                <th style="width: 300px;"><br>
+                  <label for="from">FROM</label>
+                  <input type="search" list="place" id="from" name="from" placeholder="enter" />
+                  <datalist id="place">
+                    <option value="Delhi">
+                    <option value="Bengaluru">
+                    <option value="Hyderabad">
+                    <option value="Mumbai">
+                    <option value="Chennai">
+                    <option value="Tumkur">
+                    <option value="Pune">
+                    <option value="Kolkata">
+                    <option value="Goa">
+                    <option value="Chikkaballapur">
+                    <option value="Bidar">
+                    <option value="Gadag">
+                    <option value="Shivamog">
+                    <option value="Gunavante">
+                    <option value="Gokak">
+                    <option value="Gauribidanur">
+                    <option value="Bhadravati">
+                    <option value="Honnavara">
+                    <option value="Madhugiri">
+                    <option value="Kumata">
+                    <option value="Moodabidri">
+                    <option value="Dharmastala">
+                    <option value="Mandya">
+                    <option value="Mysore">
+                    <option value="Raichuru">
+                    <option value="Mangalore">
+                    <option value="Hubali">
+  
+                  </datalist>
+                </th>
+                <th style="width: 300px;"><br>
+                  <label for="to">TO</label>
+                  <input type="search" list="place" id="to" name="to" placeholder="enter" />
+                  <datalist id="place">
+                    <option value="Delhi">
+                    <option value="Bengaluru">
+                    <option value="Hyderabad">
+                    <option value="Mumbai">
+                    <option value="Chennai">
+                    <option value="Tumkur">
+                    <option value="Pune">
+                    <option value="Kolkata">
+                    <option value="Goa">
+                    <option value="Chikkaballapur">
+                    <option value="Bidar">
+                    <option value="Gadag">
+                    <option value="Shivamog">
+                    <option value="Gunavante">
+                    <option value="Gokak">
+                    <option value="Gauribidanur">
+                    <option value="Bhadravati">
+                    <option value="Honnavara">
+                    <option value="Madhugiri">
+                    <option value="Kumata">
+                    <option value="Moodabidri">
+                    <option value="Dharmastala">
+                    <option value="Mandya">
+                    <option value="Mysore">
+                    <option value="Raichuru">
+                    <option value="Mangalore">
+                    <option value="Hubali">
+  
+                  </datalist>
+                </th>
+                <th style="width: 250px">
+                  <label for="start"><br>DEPARTURE</label>
+                  <input type="date" id="start" name="trip-start" value="dd/mm/yyyy">
+                </th>
+                <th style="padding: 15px">
+                  <label for="travellers">TRAVELLERS<br></label>
+                  <select name="nu" id="travellers">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                  </select>
+                  <label for="class"><br>CLASS</label>
+                  <select name="class" id="class">
+                    <option value="a1">AC</option>
+                    <option value="a2">Non AC</option>
+                  </select>
+                  <select name="class" id="class">
+                    <option value="c1">Sleeper</option>
+                    <option value="c2">Sitting</option>
+                  </select>
+                </th>
+              </tr>
+            </table>
+            <div style="width: 50px;
+                  height: 50px;
+                  border-radius: 50%;
+                  background-color:whitesmoke;
+                  overflow: hidden;
+                  position: relative; bottom:100px; right: 310px;
+                  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                  padding:10px;">
+              <img src="t.png" width="25px" height="25px">
+            </div>
+          </div>
+          <a href="ld1.html"><button
+              style="position:relative; bottom:50px;">Search</button></a>
+        </div>
+  
+      </div>
+  
+      <div id="train" style="display: none;">
+        <div style="font-size: 17px; padding-top: 60px;
+              <input type=" radio" name="trip" value="ticket" style="padding-left: 50px;"><span>BOOK TRAIN TICKETS</span>
+          <input type="radio" name="trip" value="pnr"><span>CHECK PNR STATUS</span>
+          <input type="radio" name="trip" value="enquiry"><span>CHECK PNR STATUS</span>
+          <p style="display: inline; padding-left: 310px;">Book Rail Tickets Across India</p>
+  
+          <div style="width: 95%; height: 200px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                padding: 25px;
+                position: relative; top: 15px;">
+            <table>
+              <tr>
+                <th style="width: 300px;"><br>
+                  <label for="from">FROM</label>
+                  <input type="search" list="place" id="from" name="from" placeholder="enter" />
+                  <datalist id="place">
+                    <option value="Delhi">
+                    <option value="Bengaluru">
+                    <option value="Hyderabad">
+                    <option value="Mumbai">
+                    <option value="Chennai">
+                    <option value="Tumkur">
+                    <option value="Pune">
+                    <option value="Kolkata">
+                    <option value="Goa">
+                    <option value="Chikkaballapur">
+                    <option value="Bidar">
+                    <option value="Gadag">
+                    <option value="Shivamog">
+                    <option value="Gunavante">
+                    <option value="Gokak">
+                    <option value="Gauribidanur">
+                    <option value="Bhadravati">
+                    <option value="Honnavara">
+                    <option value="Madhugiri">
+                    <option value="Kumata">
+                    <option value="Moodabidri">
+                    <option value="Dharmastala">
+                    <option value="Mandya">
+                    <option value="Mysore">
+                    <option value="Raichuru">
+                    <option value="Mangalore">
+                    <option value="Hubali">
+  
+                  </datalist>
+                </th>
+                <th style="width: 300px;"><br>
+                  <label for="to">TO</label>
+                  <input type="search" list="place" id="to" name="to" placeholder="enter" />
+                  <datalist id="place">
+                    <option value="Delhi">
+                    <option value="Bengaluru">
+                    <option value="Hyderabad">
+                    <option value="Mumbai">
+                    <option value="Chennai">
+                    <option value="Tumkur">
+                    <option value="Pune">
+                    <option value="Kolkata">
+                    <option value="Goa">
+                    <option value="Chikkaballapur">
+                    <option value="Bidar">
+                    <option value="Gadag">
+                    <option value="Shivamog">
+                    <option value="Gunavante">
+                    <option value="Gokak">
+                    <option value="Gauribidanur">
+                    <option value="Bhadravati">
+                    <option value="Honnavara">
+                    <option value="Madhugiri">
+                    <option value="Kumata">
+                    <option value="Moodabidri">
+                    <option value="Dharmastala">
+                    <option value="Mandya">
+                    <option value="Mysore">
+                    <option value="Raichuru">
+                    <option value="Mangalore">
+                    <option value="Hubali">
+  
+                  </datalist>
+                </th>
+                <th style="width: 250px">
+                  <label for="start"><br>DEPARTURE</label>
+                  <input type="date" id="start" name="trip-start" value="dd/mm/yyyy">
+                </th>
+                <th style="padding: 15px">
+                  <label for="travellers">TRAVELLERS<br></label>
+                  <select name="nu" id="travellers">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                  </select>
+                  <label for="class"><br>CLASS</label>
+                  <select name="class" id="class">
+                    <option value="a1">AC</option>
+                    <option value="a2">Non AC</option>
+                  </select>
+                  <select name="class" id="class">
+                    <option value="c1">Sleeper</option>
+                    <option value="c2">Sitting</option>
+                  </select>
+                </th>
+              </tr>
+            </table>
+            <div style="width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    background-color:whitesmoke;
+                    overflow: hidden;
+                    position: relative; bottom:100px; right: 310px;
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                    padding:10px;">
+              <img src="t.png" width="25px" height="25px">
+            </div>
+          </div>
+          <a href="ld1.html"><button
+              style="position:relative; bottom:50px;">Search</button></a>
+        </div>
+      </div>
+  
+      <div id="cab" style="display: none;">
+        <div style="font-size: 15px; padding-top: 60px;">
+          <input type="radio" name="trip" value="one way" style="padding-left: 50px;"><span>OUTSTATION ONEWAY</span>
+          <input type="radio" name="trip" value="round trip"><span>OUTSTATION ROUND TRIP</span>
+          <input type="radio" name="trip" value="airport"><span>AIRPORT TRANSFER</span>
+          <p style="display: inline; padding-left:120px;">Book affordable Outstation Cabs for over 900+ cities in India
+          </p>
+  
+          <div
+            style="width: 95%; height: 200px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); padding: 25px; position: relative; top: 15px;">
+            <table>
+              <tr>
+                <th style="width: 275px;"><br>
+                  <label for="from">FROM</label>
+                  <input type="search" list="place" id="from" name="from" placeholder="enter" />
+                  <datalist id="place">
+                    <option value="Delhi">
+                    <option value="Bengaluru">
+                    <option value="Hyderabad">
+                    <option value="Mumbai">
+                    <option value="Chennai">
+                    <option value="Mysore">
+                    <option value="Pune">
+                    <option value="Kolkata">
+                    <option value="Goa">
+                    <option value="Rajghat">
+                    <option value="Lucknow">
+                    <option value="Tumkur">
+                    <option value="Hasan">
+                    <option value="Mandya">
+                    <option value="Ranibennur">
+                    <option value="Raichuru">
+                    <option value="Belgavi">
+                    <option value="Ghataprabha">
+                    <option value="Malaprabha">
+                    <option value="Madhugiri">
+                    <option value="Sira">
+                    <option value="Koratagere">
+                    <option value="Chikkaballapur">
+                    <option value="Amaravati">
+                    <option value="Kadapa">
+                    <option value="Gauribidanur">
+                    <option value="Hubali">
+                  </datalist>
+                </th>
+                <th style="width: 275px;"><br>
+                  <label for="to">TO</label>
+                  <input type="search" list="place" id="to" name="to" placeholder="enter" />
+                  <datalist id="place">
+                    <option value="Delhi">
+                    <option value="Bengaluru">
+                    <option value="Hyderabad">
+                    <option value="Mumbai">
+                    <option value="Chennai">
+                    <option value="Mysore">
+                    <option value="Pune">
+                    <option value="Kolkata">
+                    <option value="Goa">
+                    <option value="Rajghat">
+                    <option value="Lucknow">
+                    <option value="Tumkur">
+                    <option value="Hasan">
+                    <option value="Mandya">
+                    <option value="Ranibennur">
+                    <option value="Raichuru">
+                    <option value="Belgavi">
+                    <option value="Ghataprabha">
+                    <option value="Malaprabha">
+                    <option value="Madhugiri">
+                    <option value="Sira">
+                    <option value="Koratagere">
+                    <option value="Chikkaballapur">
+                    <option value="Amaravati">
+                    <option value="Kadapa">
+                    <option value="Gauribidanur">
+                    <option value="Hubali">
+                  </datalist>
+                </th>
+                <th style="width: 200px">
+                  <label for="start"><br>DEPARTURE</label>
+                  <input type="date" id="start" name="trip-start" value="dd/mm/yyyy">
+                </th>
+                <th style="width: 200px">
+                  <label for="return"><br>RETURN</label>
+                  <input type="date" id="return" name="trip-return" value="dd/mm/yyyy">
+                </th>
+                <th style="padding: 15px">
+                  <label for="travellers">PICKUP</label>
+                  <select name="nu" id="travellers">
+                    <option value="1">12:00</option>
+                    <option value="2">12:30</option>
+                    <option value="3">1:00</option>
+                    <option value="4">1:30</option>
+                    <option value="5">2:00</option>
+                    <option value="6">2:30</option>
+                    <option value="">3:00</option>
+                    <option value="">3:30</option>
+                    <option value="">4:00</option>
+                    <option value="">4:30</option>
+                    <option value="">5:00</option>
+                    <option value="">5:30</option>
+                    <option value="">6:00</option>
+                    <option value="">6:30</option>
+                    <option value="">7:00</option>
+                    <option value="">7:30</option>
+                    <option value="">8:00</option>
+                    <option value="">8:30</option>
+                    <option value="">9:00</option>
+                    <option value="">9:30</option>
+                    <option value="">10:00</option>
+                    <option value="">10:30</option>
+                    <option value="">11:00</option>
+                    <option value="">11:30</option>
+                  </select>
+                  <select>
+                    <option>AM</option>
+                    <option>PM</option>
+                  </select>
+                  <br><br>
+                  <label for="travellers">DROP TIME</label>
+                  <select name="nu" id="travellers">
+                    <option value="1">12:00</option>
+                    <option value="2">12:30</option>
+                    <option value="3">1:00</option>
+                    <option value="4">1:30</option>
+                    <option value="5">2:00</option>
+                    <option value="6">2:30</option>
+                    <option value="">3:00</option>
+                    <option value="">3:30</option>
+                    <option value="">4:00</option>
+                    <option value="">4:30</option>
+                    <option value="">5:00</option>
+                    <option value="">5:30</option>
+                    <option value="">6:00</option>
+                    <option value="">6:30</option>
+                    <option value="">7:00</option>
+                    <option value="">7:30</option>
+                    <option value="">8:00</option>
+                    <option value="">8:30</option>
+                    <option value="">9:00</option>
+                    <option value="">9:30</option>
+                    <option value="">10:00</option>
+                    <option value="">10:30</option>
+                    <option value="">11:00</option>
+                    <option value="">11:30</option>
+                  </select>
+                  <select>
+                    <option>AM</option>
+                    <option>PM</option>
+                  </select>
+                </th>
+              </tr>
+            </table>
+          </div>
+          <div style="width: 50px; height: 50px;
+                      border-radius: 50%;
+                      background-color:whitesmoke; overflow: hidden;
+                      position: relative; bottom:115px; right: 335px;
+                      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                      padding:10px;">
+            <img src="t.png" width="25px" height="25px">
+          </div>
+        </div>
+        <a href="ld1.html"><button>Search</button></a>
+      </div>
+  
+  
+      <div id="hotel" style="display: none;">
+        <div style="font-size: 15px; padding-top: 60px;">
+          <p style="display: inline; padding-left:120px;">Book Domestic and International hotels and homestays.</p>
+          <div
+            style="width: 95%; height: 200px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); padding: 25px; position: relative; top: 15px;">
+            <table>
+              <tr>
+                <th style="width: 500px;"><br>
+                  <label for="from">CITY/ HOTEL/ AREA/ BUILDING</label>
+                  <input type="search" list="place" id="from" name="from" placeholder="enter" />
+                  <datalist id="place">
+                    <option value="Delhi">
+                    <option value="Bengaluru">
+                    <option value="Hyderabad">
+                    <option value="Mumbai">
+                    <option value="Chennai">
+                    <option value="Bangkok">
+                    <option value="Pune">
+                    <option value="Kolkata">
+                    <option value="Goa">
+                    <option value="Singapore">
+                    <option value="Kathmandu">
+                    <option value="Sharjah">
+                    <option value="New York">
+                    <option value="London">
+                    <option value="Hong Kong">
+                    <option value="San Fransisco">
+                    <option value="Paris">
+                    <option value="Tokyo">
+                    <option value="Berlin">
+                    <option value="Rome">
+                    <option value="Toronto">
+                    <option value="Geneva">
+                    <option value="Sydney">
+                    <option value="Johannesburg">
+                    <option value="Barcelona">
+                    <option value="Mangalore">
+                    <option value="Hubali">
+  
+                  </datalist>
+                </th>
+                <th style="width: 300px">
+                  <label for="start"><br>CHECK-IN</label>
+                  <input type="date" id="start" name="trip-start" value="dd/mm/yyyy">
+                </th>
+                <th style="width: 300px">
+                  <label for="return"><br>CHECK-OUT</label>
+                  <input type="date" id="return" name="trip-return" value="dd/mm/yyyy">
+                </th>
+                <th style="padding: 15px">
+                  <label for="travellers">ROOMS</label>
+                  <select name="nu" id="travellers">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select><br><br>
+                  <label for="travellers">GUESTS</label>
+                  <select name="nu" id="travellers">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </th>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <a href="ld1.html"><button style="position: relative; bottom: 45px;">Search</button></a>
+      </div>
+  
+    </div>
+  </center>
+<center>
+      <div class="offers">
+        <p style="font-size: 50px;">Offers</p>
+        <p style="position: relative; bottom: 50px;">once you miss, it's really difficult to find it again</p>
+        <div id="slider1">
+          <div class="container1">
+            <div class="slide1">
+              <h3>For Students</h3>
+              <p style="font-size: medium;">Apply this Code and get additional 25% discounts</p>
+              <h4>STUDENT1223ENJOY</h4>
+              <a href="book.html"><button style="position: relative; top: 2px; left: 180px; background-color: red;">Book</button></a>
+              <h6 style="text-align: end;">terms and conditions apply!</h6>
+            </div>
+            <div class="slide1">
+              <h3>For Everyone</h3>
+              <p style="font-size: medium;">Apply this Code and get additional 25% discounts</p>
+              <h4>EVERYONE0319ENJOY</h4>
+              <a href="book.html"><button style="position: relative; top: 2px; left: 180px; background-color: red;">Book</button></a>
+            </div>
+            <div class="slide1">
+              <h3>For App User</h3>
+              <p style="font-size: medium;">Apply this Code and get additional 15% discounts</p>
+              <h4>APP0401ENJOY</h4>
+              <a href="book.html"><button style="position: relative; top: 2px; left: 180px; background-color: red;">Book</button></a>              
+            </div>
+            <div class="slide1">
+              <h3>For Trips on Bihar</h3>
+              <p style="font-size: medium;">Apply this Code and get additional 50% discounts</p>
+              <h4>WILD0517BIHAR</h4>
+              <a href="book.html"><button style="position: relative; top: 2px; left: 180px; background-color: red; ">Book</button></a>
+            </div>
+            <div class="slide1">
+              <h3>For International trips</h3>
+              <p style="font-size: medium;">Apply this Code and get additional 25% discounts</p>
+              <h4>WORLD1117ENJOY</h4>
+            <a href="book.html"><button style="position: relative; top: 2px; left: 180px; background-color: red;">Book</button></a>
+            <h6 style="text-align: end;">terms and conditions apply!</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <div id="about" style="width: 80%; height: 300px; background-color: burlywood; margin: 0 0 35px 0; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+      <p style="font-size: 5em;font-family: 'Aladin', cursive; color: black; opacity: 0.5;;
+    text-align: start;
+      position: relative;right: 100px; top: 50px;
+      
+      display: inline;
+      ">Happy Journey</p>
+      <p style="float: left; color:aliceblue; font-size: 2em; position: relative; top: 200px;"> </p>  
+      
+      <section style="float: right; width: 50%; height: 100%; background-color: darkkhaki; color: white; overflow: -moz-hidden-unscrollable; position: static; display: inline-block;"><br>
+      <p style="font-size: 1em;">The leading player in online flight bookings in India, <p style="display: inline;font-family: 'Aladin', cursive; font-size: 25px;">Takeoff Travells</p> offers great offers, some of the lowest
+      airfares, exclusive discounts and a seamless online booking experience. Flight, hotel and holiday bookings through the
+      desktop site is a delightfully customer friendly experience, and with just a few clicks you can complete your
+      booking.</p>
+      </section>
+    </div>
+    <center>
+      <div id="trip"
+        style="height:550px; width:50%; background-color: whitesmoke; margin: 35px 0 0 0;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+        <div class="slider-wrapper">
+          <div class="slider">
+    
+            <input type="radio" name="slider" class="trigger" id="one" checked="checked" />
+            <div class="slide">
+              <figure class="slide-figure">
+                <img class="slide-img" src="t1.jpg" />
+                <figcaption class="slide-caption">
+                  <p>&nbsp Bihar, India</p>
+                </figcaption>
+              </figure>
+            </div>
+    
+            <input type="radio" name="slider" class="trigger" id="two" />
+            <div class="slide">
+              <figure class="slide-figure">
+                <img class="slide-img" src="t2.jpg" />
+                <figcaption class="slide-caption">
+                  <p>&nbsp Cinque Terre, Italy</p>
+                </figcaption>
+              </figure>
+            </div>
+    
+            <input type="radio" name="slider" class="trigger" id="three" />
+            <div class="slide">
+              <figure class="slide-figure">
+                <img class="slide-img" src="t3.jpg" />
+                <figcaption class="slide-caption">
+                  <p>&nbsp Moscow, Russia</p>
+                </figcaption>
+              </figure>
+            </div>
+    
+            <input type="radio" name="slider" class="trigger" id="four" />
+            <div class="slide">
+              <figure class="slide-figure">
+                <img class="slide-img" src="t4.jpg" />
+                <figcaption class="slide-caption">
+                  <p>&nbsp London, UK</p>
+                </figcaption>
+              </figure>
+            </div>
+    
+            <input type="radio" name="slider" class="trigger" id="five" />
+            <div class="slide">
+              <figure class="slide-figure">
+                <img class="slide-img" src="t5.jpg" />
+                <figcaption class="slide-caption">
+                  <p>&nbsp Sydney, Australia</p>
+                </figcaption>
+              </figure>
+            </div>
+    
+            <input type="radio" name="slider" class="trigger" id="six" />
+            <div class="slide">
+              <figure class="slide-figure">
+                <img class="slide-img" src="t6.jpg" />
+                <figcaption class="slide-caption">
+                  <p>&nbsp Johannesburg, South Africa</p>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <a href="C:\Users\Asus\Desktop\Let's Travell website\book.html"><button
+              style="position: relative; bottom: 6em; left: 12em; background-color: red;">Book</button></a>
+          <ul class="slider-nav">
+            <li class="slider-nav__item"><label class="slider-nav__label" for="one"></label></li>
+            <li class="slider-nav__item"><label class="slider-nav__label" for="two"></label></li>
+            <li class="slider-nav__item"><label class="slider-nav__label" for="three"></label></li>
+            <li class="slider-nav__item"><label class="slider-nav__label" for="four"></label></li>
+            <li class="slider-nav__item"><label class="slider-nav__label" for="five"></label></li>
+            <li class="slider-nav__item"><label class="slider-nav__label" for="six"></label></li>
+          </ul>
+
+          
+        </div>
+        
+      </div>
+    </center>
+    <div style="width:75%; 
+    height:300px; background-color: tan; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); ">
+      <p style="font-size: 50px; color: wheat;">Reviews</p>
+      <div id="slider2">
+        <div class="container2">
+          <div class="slide2">
+            <h3></h3>
+            <p>During my recent visit to Bengaluru on 12th February 2020, had done my hotel booking on the basis of the Hotels available
+            on the Let's Travel site. The Hotel selected by me was a decent one and my stay was quite
+            comfortable.I would like to thank the Let's team for providing a fair and just
+            review of the hotel.</p>
+            <h3>Rahul</h3>
+          </div>
+          <div class="slide2">
+           <p>Hi. I just to brief my experience with Let's Travel. Just few months back I have to travel on urgent basis to Lucknow.
+          I just started searching for Flight ticket to Lucknow from Dehradun for very next day. After searching various
+          travelling agency portal, I got best price from Let's Travel around Rs 2500. Their customer support was good.
+          Definitely I will recommend Let's Travel TO OTHERS.</p>
+                      <h3>Akshay</h3>
+          </div>
+          <div class="slide2">
+            <p>I want to share my memorable experience with Let's Travel and would love to recommend people for the same. The flight
+            tickets were so cheap other than any other websites and tremendous so friendly support from Customer care.</p>
+          <h3>Nikhil</h3>
+          </div>
+          <div class="slide2">
+            
+            <p>
+              I am back from the Unique Swiss Paris Mode. I can describe it in one line - I think I died and went to heaven and now I
+              am back :) The whole trip was a Karmic Connection and I felt I was in a dream
+            </p>
+            <h3>Shashank</h3>
+          </div>
+          <div class="slide2">
+            
+            <p>
+              We are back to India and have to admit, our Big Australian Holiday was amazing!! I would like to personally thank
+              Mr.Jalaj for selecting the right places for us and Swati for organizing everything.
+            </p>
+            <h3>Kalin bhaiya</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </center>
+  </div>
+  <div class="bar"></div>
+  <footer>
+    <figcaption>
+      <p style="font-family: 'Aladin', cursive;">Takeoff Travells</p>
+      <p style="font-family: 'Libre Barcode 128 Text', cursive; 
+      text-align: center; font-size: 1em; 
+      display: inline; color: brown;">SANTOSH</p>
+    </figcaption>
+  </footer>
+
+    
+
+<div class="outer-menu">
+  <input class="checkbox-toggle" type="checkbox" />
+  <div class="hamburger">
+    <div></div>
+  </div>
+  <div class="menu">
+    <div>
+      <div>
+        <ul>
+          <li><a href="C:\Users\Asus\Desktop\Let's Travell website\Home_page.html" target="_replace">Why us</a></li>
+          <li><a href="C:\Users\Asus\Desktop\Let's Travell website\book.html" target="_blank">Bookings</a></li>
+          <li><a href="C:\Users\Asus\Desktop\Let's Travell website\connect.html" target="_self">Connect</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
